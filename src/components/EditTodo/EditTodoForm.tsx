@@ -31,21 +31,21 @@ const EditTodoForm = () => {
       </label>
       <input
         id="todo"
-        className="rounded border-2 border-input-border p-4 text-2xl text-primary-border"
+        className="rounded-lg border-2 border-input-border p-4 text-2xl text-primary-border"
         type="text"
         placeholder={`${newTodoName}`}
         value={newTodoName}
         onChange={onInputChange}
       />
-      <div className="mt-auto w-full flex gap-4">
+      <div className="mt-auto w-full flex gap-4 max-w-[750px] mx-auto">
         <button
-          className="bg-danger border-2 border-danger-border text-white px-6 py-4 rounded-lg"
+          className="bg-danger border-2 border-danger-border text-white px-8 py-4 rounded-lg text-shadow bottom-shadow"
           onClick={onDelete}
         >
           Delete
         </button>
         <button
-          className="flex-1 bg-primary border-2 border-primary-border text-white px-6 py-4 rounded-lg"
+          className="flex-1 bg-primary border-2 border-primary-border text-white px-6 py-4 rounded-lg text-shadow bottom-shadow"
           type="button"
           onClick={onSave}
         >

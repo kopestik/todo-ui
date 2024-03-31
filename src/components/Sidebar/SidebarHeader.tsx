@@ -12,8 +12,8 @@ const SidebarHeader = () => {
       </div>
       <div>
         <h1 className="flex flex-col">
-          <span className="font-bold">Hello, Jhon</span>
-          <span className="text-2xl font-light italic">
+          <span className="font-semibold text-shadow">Hello, Jhon</span>
+          <span className="text-2xl italic font-thin text-shadow">
             What are your plans
             <br /> for today?
           </span>

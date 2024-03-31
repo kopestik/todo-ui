@@ -11,12 +11,12 @@ const Todos = () => {
   };
 
   return (
-    <section className="p-6 relative flex-1">
-      <ul className="flex flex-col gap-8">
+    <section className="relative flex-1 flex flex-col pb-24">
+      <ul className="flex flex-col gap-8 overflow-auto flex-1 basis-0 p-6">
         {todos && todos.map((todo) => <TodoItem {...todo} key={todo.id} />)}
       </ul>
       <button
-        className="absolute bottom-5 right-5 bg-primary border-primary-border border-2 p-4 rounded-full w-14 h-14 shadow-md"
+        className="absolute bottom-5 right-5 bg-primary border-primary-border border-2 p-4 rounded-full w-14 h-14 bottom-shadow"
         onClick={onAddTodo}
       >
         <PlusIcon />

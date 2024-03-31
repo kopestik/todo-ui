@@ -19,7 +19,7 @@ const TodoItem = (todo: Todo) => {
   };
 
   return (
-    <li className="flex items-center gap-4 rounded px-4 py-6 bg-white shadow-md font-semibold text-secondary">
+    <li className="flex items-center gap-4 rounded-lg px-4 py-6 bg-white shadow-md font-semibold text-secondary">
       <button
         className={`flex items-center justify-center w-8 h-8 rounded-full border border-secondary ${
           isCompleted ? "bg-success opacity-50 border-success-border" : ""
@@ -30,7 +30,7 @@ const TodoItem = (todo: Todo) => {
       </button>
       <p className={isCompleted ? isCompletedClass : ""}>{title}</p>
       <button
-        className="ml-auto border border-secondary rounded py-2 px-3"
+        className="ml-auto border border-secondary rounded-lg py-2 px-3"
         onClick={onEdit}
       >
         Edit

@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .right-shadow {
-  box-shadow: 0px 0px 10px 0px rgba(23, 23, 23, 0.3);
+  box-shadow: 0 0 10px 0 rgba(23, 23, 23, 0.3);
   z-index: 1;
+}
+
+.bottom-shadow {
+  box-shadow: 0 2px 4px 0 rgba(23, 23, 23, 0.3);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px #202020;
 }
