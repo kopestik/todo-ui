@@ -5,13 +5,14 @@ const EditTodoForm = () => {
   const { toBeEditedTodo, setToBeEditedTodo } = useTodo();
   const { editTodo, removeTodo } = useTodo();
   const [newTodoName, setNewTodoName] = useState(toBeEditedTodo?.title);
+  const isDisabled = newTodoName === "";
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value) setNewTodoName(e.target.value);
+    setNewTodoName(e.target.value);
   };
 
   const onSave = () => {
-    if (toBeEditedTodo !== undefined) {
+    if (toBeEditedTodo !== undefined && !isDisabled) {
       editTodo(toBeEditedTodo.id, newTodoName || "");
       setToBeEditedTodo(undefined);
     }
@@ -33,7 +34,7 @@ const EditTodoForm = () => {
         id="todo"
         className="rounded-lg border-2 border-input-border p-4 text-2xl text-primary-border"
         type="text"
-        placeholder={`${newTodoName}`}
+        placeholder="Enter task name..."
         value={newTodoName}
         onChange={onInputChange}
       />
@@ -45,8 +46,11 @@ const EditTodoForm = () => {
           Delete
         </button>
         <button
-          className="flex-1 bg-primary border-2 border-primary-border text-white px-6 py-4 rounded-lg text-shadow bottom-shadow"
+          className={`flex-1 bg-primary border-2 border-primary-border text-white px-6 py-4 rounded-lg text-shadow bottom-shadow ${
+            isDisabled ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           type="button"
+          disabled={isDisabled}
           onClick={onSave}
         >
           Save
