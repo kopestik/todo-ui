@@ -13,6 +13,7 @@ export default {
         success: "#CDE53D",
         "success-border": "#9EB031",
         "input-border": "#CBCBCB",
+        sidebar: "#F3F3F3",
       },
     },
   },
